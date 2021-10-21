@@ -1,0 +1,35 @@
+<odoo>
+    <record id="view_tree_is902" model="ir.ui.view">
+        <field name="name">view.tree.is902</field>
+        <field name="model">md.is902</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <field name="status"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="view_form_is902" model="ir.ui.view">
+        <field name="name">view.form.is902</field>
+        <field name="model">md.is902</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="name" string="Descripción"/>
+                        <field name="status" string="Estado de la Tarea"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_view_is902" model="ir.actions.act_window">
+        <field name="name">Lista de Tareas</field>
+        <field name="res_model">md.is902</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem id="menu_is902" parent="" action="module_IS902.action_view_is902"/>
+</odoo>
